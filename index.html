@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youssef Mahmoud | Flutter Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="favicon.png" />
-
     <style>
         :root {
             --primary: #00aaff;
@@ -38,7 +36,6 @@
             --light-transparent: rgba(33, 37, 41, 0.85);
             --glass: rgba(0, 0, 0, 0.03);
             --glass-light: rgba(0, 0, 0, 0.03);
-            /* --overlay-gradient: linear-gradient(135deg, rgba(230, 240, 255, 0.9) 0%, rgba(200, 230, 255, 0.7) 100%); */
             --overlay-gradient: rgba(255, 255, 255, 0.96);
             --text-color: #333;
             --text-color-dark: rgb(248, 249, 250);
@@ -77,6 +74,7 @@
             background: var(--overlay-gradient);
             z-index: -1;
         }
+        
         /* Navigation */
         nav {
             position: fixed;
@@ -480,6 +478,103 @@
         .skills-highlight ul{
             padding-left: 20px;
         }
+        
+        /* Education Section */
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background-color: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 170, 255, 0.1);
+        }
+        
+        .education-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+        }
+        
+        .education-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            min-width: 40px;
+        }
+        
+        .education-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .education-subtitle {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+        
+        .education-duration {
+            display: inline-block;
+            background-color: rgba(0, 170, 255, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .education-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 1.2rem;
+        }
+        
+        .education-highlights {
+            list-style-type: none;
+        }
+        
+        .education-highlights li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+        
+        .education-highlights li::before {
+            content: '▹';
+            color: var(--primary);
+        }
+        
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -708,7 +803,7 @@
             color: var(--text-color);
         }
         
-        .contact-text a, 
+        .contact-text a,
         .contact-text p {
             color: var(--text-color);
             text-decoration: none;
@@ -896,7 +991,7 @@
             .theme-switch{
                 transform: scale(0.6);
             }
-            
+                    
         }
         
         @media (max-width: 400px) {
@@ -923,6 +1018,10 @@
             .skill-category {
                 padding: 1.2rem;
             }
+            
+            .education-container {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width:670px) {
             a.logo{
@@ -938,11 +1037,12 @@
             <a href="#" class="logo">Youssef</a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#timeline">Timeline</a>
                 <a href="#contact">Contact</a>
-                
+                            
             </div>
             <label class="theme-switch">
                     <input type="checkbox" class="theme-switch__checkbox" id="themeToggle">
@@ -1026,6 +1126,80 @@
             <div class="about-image">
                 <!-- Replace with your actual image -->
                 <img src="my photo.jpg" alt="Youssef Mahmoud">
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education & Training</h2>
+        <div class="education-container">
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="education-title">Fayoum University</h3>
+                        <p class="education-subtitle">Bachelor of Computer Science</p>
+                        <span class="education-duration">2022 - Present</span>
+                    </div>
+                </div>
+                <p class="education-description">
+                    Currently in my 4th year of Computer Science studies, focusing on software engineering, 
+                    algorithms, and mobile application development.
+                </p>
+                <ul class="education-highlights">
+                    <li>Specializing in Mobile Application Development</li>
+                    <li>Participated in ECPC competitions (2023, 2024)</li>
+                    <li>Maintained strong academic performance</li>
+                </ul>
+            </div>
+            
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="education-title">Information Technology Institute (ITI)</h3>
+                        <p class="education-subtitle">Flutter Mobile Development</p>
+                        <span class="education-duration">July 7, 2025 - August 7, 2025</span>
+                    </div>
+                </div>
+                <p class="education-description">
+                    Intensive training program focusing on Flutter framework, Dart programming language, 
+                    and mobile app development best practices.
+                </p>
+                <ul class="education-highlights">
+                    <li>Advanced Flutter concepts and architecture</li>
+                    <li>State management with Bloc and Cubit</li>
+                    <li>Firebase integration and RESTful APIs</li>
+                    <li>Project-based learning approach</li>
+                </ul>
+            </div>
+            
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="education-title">National Telecommunication Institute (NTI)</h3>
+                        <p class="education-subtitle">Flutter Development</p>
+                        <span class="education-duration">August 10, 2025 - September 29, 2025</span>
+                    </div>
+                </div>
+                <p class="education-description">
+                    Specialized training in Flutter development covering advanced topics and real-world 
+                    application development scenarios.
+                </p>
+                <ul class="education-highlights">
+                    <li>Advanced UI/UX design principles</li>
+                    <li>Performance optimization techniques</li>
+                    <li>Cross-platform development strategies</li>
+                    <li>Integration with various backend services</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1271,10 +1445,10 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
+                                
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+                                
                 if (targetElement) {
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
@@ -1282,7 +1456,7 @@
                 }
             });
         });
-        
+                
         // Change navigation style on scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', function() {
@@ -1292,23 +1466,23 @@
                 navbar.classList.remove('scrolled');
             }
         });
-        
+                
         // Highlight active section in navbar
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-links a');
-        
+                
         window.addEventListener('scroll', function() {
             let current = '';
-            
+                        
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+                                
                 if (pageYOffset >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
-            
+                        
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
@@ -1316,29 +1490,29 @@
                 }
             });
         });
-        
+                
         // Animation on scroll
         const animateOnScroll = function() {
-            const elements = document.querySelectorAll('.skill-category, .project-card, .timeline-item');
-            
+            const elements = document.querySelectorAll('.skill-category, .project-card, .timeline-item, .education-card');
+                        
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.3;
-                
+                                
                 if (elementPosition < screenPosition) {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
                 }
             });
         };
-        
+
         // Initialize elements with opacity 0 for animation
-        document.querySelectorAll('.skill-category, .project-card, .timeline-item').forEach(element => {
+        document.querySelectorAll('.skill-category, .project-card, .timeline-item, .education-card').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(20px)';
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
-        
+                
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
 
