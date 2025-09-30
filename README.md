@@ -14,33 +14,30 @@ This site show cases my **skills**, **projects**, and **experience** as a **Flut
 
 ---
 
-### 🎬 Demo Video
-
-https://github.com/user-attachments/assets/171e1d36-e1f7-4005-82d4-db764c40ed5c
-
----
-
 ### 📸 Portfolio Screenshots
 
 Here’s a quick look at some of the UI screens from the project:
 
-| Home Page | Skills Section |
-|-----------|----------------|
-| ![Home](https://github.com/Youssef-Ma7moud-Eid/Task1_ITI/blob/b98ed6706678d57e744ac2f35ca3a9d861a4cc16/image1.jpg) | ![Skills](https://github.com/Youssef-Ma7moud-Eid/Task1_ITI/blob/e8b1a20c20e9adb6c1c2ce2f370b7670e64f9c6b/image2.jpg) |
+| Home Page | About Section |
+|-----------|---------------|
+| ![Home](https://github.com/user-attachments/assets/bab93e12-09ee-4edc-b159-1045dfe2cf94) | ![About](https://github.com/user-attachments/assets/f06574ec-60ad-4fa0-9675-549f5a8c0e99) |
+
+| Education | Skills |
+|-----------|--------|
+| ![Education](https://github.com/user-attachments/assets/cec90c58-791c-49b9-bea8-d0aab8d95613) | ![Skills](https://github.com/user-attachments/assets/6ecfeceb-547f-4eec-b262-c62708705f7f) |
 
 | Projects | Timeline |
 |----------|----------|
-| ![Projects](https://github.com/Youssef-Ma7moud-Eid/Task1_ITI/blob/e8b1a20c20e9adb6c1c2ce2f370b7670e64f9c6b/image3.jpg) | ![Timeline](https://github.com/Youssef-Ma7moud-Eid/Task1_ITI/blob/44fd8f73324eec2b5f1f2c2e5a1aa75733703cbc/image4.jpg) |
+| ![Projects](https://github.com/user-attachments/assets/995907ef-6110-425c-9091-f7041a590acc) | ![Timeline](https://github.com/user-attachments/assets/8bb6ae65-be8a-4bfc-9e59-1358ba803a14) |
 
 | Contact | Responsiveness |
 |---------|----------------|
-| ![Contact](https://github.com/Youssef-Ma7moud-Eid/Task1_ITI/blob/dc1eb7a5bb4c7b3301f952966f6eb87c0ef74503/image5.jpg) | ![Responsive](https://github.com/Youssef-Ma7moud-Eid/Task1_ITI/blob/c20b82b4523fc32e9d90a615c847d4be2d5dece0/image6.jpg) |
+| ![Contact](https://github.com/user-attachments/assets/acf73923-600a-41e7-bc64-21ffc33d2fcc) | ![Responsive](https://github.com/user-attachments/assets/c20b82b4523fc32e9d90a615c847d4be2d5dece0/image6.jpg) |
 
 | Full View |
 |-----------|
-| ![Full](https://github.com/Youssef-Ma7moud-Eid/Task1_ITI/blob/2c7899481482e1bc0ce492a212e3172e27d82c1c/image7.jpg) |
+| ![Full](https://github.com/user-attachments/assets/acf73923-600a-41e7-bc64-21ffc33d2fcc) |
 
----
 
 > 💬 **Built With:** HTML, CSS ,JavaScript 
 > ✨ **Designed To Be:** Responsive, Clean, and Professional
