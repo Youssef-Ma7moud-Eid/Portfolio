@@ -32,11 +32,8 @@ Here’s a quick look at some of the UI screens from the project:
 
 | Contact | Responsiveness |
 |---------|----------------|
-| ![Contact](https://github.com/user-attachments/assets/acf73923-600a-41e7-bc64-21ffc33d2fcc) | ![Responsive](https://github.com/user-attachments/assets/c20b82b4523fc32e9d90a615c847d4be2d5dece0/image6.jpg) |
+| ![Contact](https://github.com/user-attachments/assets/acf73923-600a-41e7-bc64-21ffc33d2fcc) 
 
-| Full View |
-|-----------|
-| ![Full](https://github.com/user-attachments/assets/acf73923-600a-41e7-bc64-21ffc33d2fcc) |
 
 
 > 💬 **Built With:** HTML, CSS ,JavaScript 
