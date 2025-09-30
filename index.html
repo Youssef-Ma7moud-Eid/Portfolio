@@ -855,7 +855,38 @@
             min-height: 120px;
             resize: none;
         }
-        
+        .projects-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.projects-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.project-card {
+  min-width: 300px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
         .submit-btn {
             background-color: var(--primary);
             color: var(--text-color-dark);
@@ -1095,40 +1126,57 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    I'm a passionate Flutter developer currently pursuing my degree in Computer Science at Fayoum University. 
-                    My journey in programming started with a curiosity for problem-solving and has evolved into a love for 
-                    creating mobile applications that make a difference.
-                </p>
-                <p>
-                    I've had the privilege of competing in the Egyptian Collegiate Programming Contest (ECPC) in both 2023 
-                    and 2024, experiences that have sharpened my algorithmic thinking and teamwork skills under pressure.
-                </p>
-                <p>
-                    When I'm not coding, you can find me contributing to open-source projects, learning new technologies, 
-                    or participating in coding challenges to continuously improve my skills.
-                </p>
-                <div class="skills-highlight">
-                    <h3>Technical Focus:</h3>
-                    <ul>
-                        <li>Cross-platform mobile development with Flutter</li>
-                        <li>Clean architecture and maintainable code</li>
-                        <li>Performance optimization</li>
-                        <li>User experience design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="about-image">
-                <!-- Replace with your actual image -->
-                <img src="my photo.jpg" alt="Youssef Mahmoud">
-            </div>
-        </div>
-    </section>
+<!-- About Section -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p>
+        I'm <strong>Youssef Mahmoud</strong>, a dedicated <strong>Flutter Developer</strong> with a strong focus 
+        on building <strong>cross-platform mobile applications</strong> that are scalable, performant, and 
+        user-friendly. My passion for Flutter comes from its ability to deliver beautiful native apps from a 
+        single codebase, and I’ve specialized in mastering its ecosystem end-to-end.
+      </p>
+      <p>
+        My expertise includes implementing <strong>Bloc & Cubit</strong> for state management, 
+        applying <strong>MVVM and Clean Architecture</strong> for maintainable code, and leveraging 
+        <strong>Repository & SOLID principles</strong> for scalability. I have worked extensively with 
+        <strong>Firebase services</strong> (Authentication, Firestore, Messaging) and integrated 
+        <strong>RESTful APIs</strong>, <strong>local databases</strong> (Isar, Hive, Secure Storage), and 
+        <strong>Flutter Local Notifications</strong> to create complete solutions.
+      </p>
+      <p>
+        I also explore advanced Flutter features like <strong>animations</strong>, 
+        <strong>responsive & adaptive UI</strong>, and <strong>payment gateways (Stripe/PayPal)</strong> to 
+        enhance both functionality and user experience. My projects—such as <em>Tasky App</em> and 
+        <em>ITI Learning App</em>—demonstrate how I combine strong Flutter techniques with clean design and 
+        real-world integrations.
+      </p>
+      <p>
+        Through continuous learning and hands-on development, I’ve grown into a Flutter engineer who doesn’t 
+        just write code but builds <strong>production-ready, modern mobile apps</strong> with a focus on 
+        architecture, performance, and usability.
+      </p>
+      <div class="skills-highlight">
+        <h3>Flutter Focus Areas:</h3>
+        <ul>
+          <li>Bloc & Cubit State Management</li>
+          <li>MVVM & Clean Architecture</li>
+          <li>Repository Pattern & SOLID Principles</li>
+          <li>Firebase Integration & RESTful APIs</li>
+          <li>Local Databases (Isar, Hive, Secure Storage)</li>
+          <li>Local Notifications & Animations</li>
+          <li>Payment Gateways (Stripe / PayPal)</li>
+          <li>Responsive & Adaptive UI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="my photo.jpg" alt="Youssef Mahmoud">
+    </div>
+  </div>
+</section>
+
 
     <!-- Education Section -->
     <section id="education">
@@ -1164,7 +1212,7 @@
                     <div>
                         <h3 class="education-title">Information Technology Institute (ITI)</h3>
                         <p class="education-subtitle">Flutter Mobile Development</p>
-                        <span class="education-duration">July 7, 2025 - August 7, 2025</span>
+                        <span class="education-duration">July 7, 2025 - August 1, 2025</span>
                     </div>
                 </div>
                 <p class="education-description">
@@ -1205,141 +1253,233 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">My Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                <ul>
-                    <li>Dart (Advanced)</li>
-                    <li>C++ (Intermediate)</li>
-                    <li>C (Intermediate)</li>
-                    <li>Python (Intermediate)</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-mobile-alt"></i> Flutter Development</h3>
-                <ul>
-                    <li>State Management (Bloc, Cubit)</li>
-                    <li>Firebase Integration</li>
-                    <li>RESTful APIs</li>
-                    <li>Local Storage (Hive, Shared Preferences)</li>
-                    <li>Responsive & Adaptive UI</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-laptop-code"></i> Software Engineering</h3>
-                <ul>
-                    <li>Object-Oriented Programming</li>
-                    <li>Data Structures & Algorithms</li>
-                    <li>MVVM Architecture</li>
-                    <li>Clean Architecture</li>
-                    <li>Git Version Control</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-globe"></i> Languages</h3>
-                <ul>
-                    <li>Arabic (Native)</li>
-                    <li>English (Intermediate)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  <section id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-container">
+
+    <!-- Programming Languages -->
+    <div class="skill-category">
+      <h3><i class="fas fa-code"></i> Programming Languages</h3>
+      <ul>
+        <li>Dart (Advanced)</li>
+        <li>C++ (Intermediate)</li>
+      </ul>
+    </div>
+
+    <!-- Flutter Development -->
+    <div class="skill-category">
+      <h3><i class="fas fa-mobile-alt"></i> Flutter Development</h3>
+      <ul>
+        <li>State Management (Bloc, Cubit)</li>
+        <li>MVVM Architecture</li>
+        <li>Clean Architecture</li>
+        <li>Repository Pattern</li>
+        <li>RESTful APIs</li>
+        <li>Firebase Services (Auth, Firestore, Messaging)</li>
+        <li>Local Database & Secure Storage (Isar, Hive, Shared Preferences)</li>
+        <li>Local Notifications</li>
+        <li>Payment Gateways (Stripe, PayPal)</li>
+        <li>Responsive & Adaptive UI</li>
+        <li>Animations</li>
+      </ul>
+    </div>
+
+    <!-- Software Engineering -->
+    <div class="skill-category">
+      <h3><i class="fas fa-laptop-code"></i> Software Engineering</h3>
+      <ul>
+        <li>Object-Oriented Programming (OOP)</li>
+        <li>Data Structures & Algorithms</li>
+        <li>SOLID Principles</li>
+        <li>Design Patterns</li>
+        <li>Problem Solving</li>
+        <li>Git & GitHub</li>
+        <li>Postman (API Testing)</li>
+      </ul>
+    </div>
+
+    <!-- Languages -->
+    <div class="skill-category">
+      <h3><i class="fas fa-globe"></i> Languages</h3>
+      <ul>
+        <li>Arabic (Native)</li>
+        <li>English (Intermediate)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="./booklyApp.jfif" alt="image">
-                <div class="project-info">
-                    <h3>Book App</h3>
-                    <p>A book app with Firebase login, Google Books integration, dark/light mode, and personalized features like search and shopping list.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Bloc</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Google Books API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Ma7moud-Eid/Book_App" target="_blank">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="./food app.png" alt="image">
-                <div class="project-info">
-                    <h3>Food E-Commerce App</h3>
-                    <p>A complete food delivery application with authentication, real-time ordering, and payment functionality.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">REST API</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">State Management</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Ma7moud-Eid/Food_app" target="_blank">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="./dashboard.png" alt="image">
-                <div class="project-info">
-                    <h3>Dashboard App</h3>
-                    <p>A cross-platform responsive dashboard with real-time data visualization, modular architecture, and touch-optimized UI—perfect</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Adaptive</span>
-                        <span class="tech-tag">Responsive technique</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Youssef-Ma7moud-Eid/Responsive_Dashboard" target="_blank">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="projects-scroll">
+     <!-- Tasky -->
+    <div class="project-card">
+      <img src="tasky.png" alt="Tasky App">
+      <div class="project-info">
+        <h3>Tasky App</h3>
+        <p>A smart task management app with Firebase Authentication, Isar DB, notifications, search, analytics, and a modern UI.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Cubit (BLoC)</span>
+          <span class="tech-tag">MVVM</span>
+          <span class="tech-tag">Isar DB</span>
+             <span class="tech-tag">Local Notification</span>
+                          <span class="tech-tag">Value Notifier</span>
 
-    <!-- Timeline Section -->
-    <section id="timeline">
-        <h2 class="section-title">My Journey</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2025</div>
-                    <h3 class="timeline-title">Responsive Flutter Dashboard & Book App</h3>
-                    <p>Developed and released a comprehensive responsive dashboard application using Flutter, implementing advanced state management and real-time data visualization.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2024</div>
-                    <h3 class="timeline-title">ECPC Competition & Food App</h3>
-                    <p>Participated in the Egyptian Collegiate Programming Contest (ECPC) for the second time. Completed development of the Food E-Commerce App with Firebase integration.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2023</div>
-                    <h3 class="timeline-title">First ECPC</h3>
-                    <p>First participation in ECPC competition.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-date">2022</div>
-                    <h3 class="timeline-title">Started Computer Science Degree</h3>
-                    <p>Began my formal education in Computer Science at Fayoum University, laying the foundation for my programming journey.</p>
-                </div>
-            </div>
         </div>
-    </section>
+        <div class="project-links">
+          <a href="https://github.com/Youssef-Ma7moud-Eid/Tasky-App" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITI App -->
+    <div class="project-card">
+      <img src="iti.jpg" alt="ITI Learning App">
+      <div class="project-info">
+        <h3>ITI Learning App</h3>
+        <p>A collaborative learning app with role-based dashboards, courses, Gemini AI Q&A, Firestore updates, EN/AR RTL, and Firebase notifications.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Bloc</span>
+          <span class="tech-tag">MVVM</span>
+           <span class="tech-tag"> Clean Architecture</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">Firestore</span>
+         <span class="tech-tag">Push Notification</span>
+        
+
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Youssef-Ma7moud-Eid/ITI---Graduation-Project" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+          <a href="https://itiwebview.netlify.app/" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book App -->
+    <div class="project-card">
+      <img src="./booklyApp.jfif" alt="Book App">
+      <div class="project-info">
+        <h3>Book App</h3>
+        <p>A book app with Firebase login, Google Books integration, dark/light mode, and personalized features like search and shopping list.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Bloc</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">Google Books API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Youssef-Ma7moud-Eid/Book_App" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food App -->
+    <div class="project-card">
+      <img src="food app.png" alt="Food App">
+      <div class="project-info">
+        <h3>Food E-Commerce App</h3>
+        <p>A complete food delivery application with authentication, real-time ordering, and payment functionality.</p>
+        <div class="project-tech">
+          <span class="tech-tag">REST API</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">State Management</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Youssef-Ma7moud-Eid/Food_app" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="project-card">
+      <img src="./dashboard.png" alt="Dashboard App">
+      <div class="project-info">
+        <h3>Dashboard App</h3>
+        <p>A cross-platform responsive dashboard with real-time data visualization, modular architecture, and touch-optimized UI.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Adaptive</span>
+          <span class="tech-tag">Responsive UI</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Youssef-Ma7moud-Eid/Responsive_Dashboard" target="_blank">
+            <i class="fab fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+
+
+  <!-- Timeline Section -->
+<section id="timeline">
+  <h2 class="section-title">My Journey</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2025 (Aug – Sep)</div>
+        <h3 class="timeline-title">NTI Training – Mobile App Development</h3>
+        <p>Completed on-site training at the National Telecommunication Institute (NTI), Benha. Learned Firebase services, Clean Architecture, SOLID principles, Repository & Design Patterns, and advanced Flutter development practices.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2025 (Jul – Aug)</div>
+        <h3 class="timeline-title">ITI Training – Flutter & Dart</h3>
+        <p>Completed a 120-hour remote training at the Information Technology Institute (ITI). Focused on Flutter, Dart, state management, clean architecture, and building scalable, responsive mobile applications.</p>
+      </div>
+    </div>
+
+   
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2024</div>
+        <h3 class="timeline-title">ECPC Competition</h3>
+        <p>Participated in the Egyptian Collegiate Programming Contest (ECPC) for the second time</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2023</div>
+        <h3 class="timeline-title">First ECPC</h3>
+        <p>First participation in ECPC competition.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-date">2022</div>
+        <h3 class="timeline-title">Started Computer Science Degree</h3>
+        <p>Began my formal education in Computer Science at Fayoum University, laying the foundation for my programming journey.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact">
