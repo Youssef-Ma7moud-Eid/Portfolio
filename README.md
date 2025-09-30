@@ -30,8 +30,8 @@ Here’s a quick look at some of the UI screens from the project:
 |----------|----------|
 | ![Projects](https://github.com/user-attachments/assets/995907ef-6110-425c-9091-f7041a590acc) | ![Timeline](https://github.com/user-attachments/assets/8bb6ae65-be8a-4bfc-9e59-1358ba803a14) |
 
-| Contact | Responsiveness |
-|---------|----------------|
+| Contact |
+|---------|
 | ![Contact](https://github.com/user-attachments/assets/acf73923-600a-41e7-bc64-21ffc33d2fcc) 
 
 
